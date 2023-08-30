@@ -9,7 +9,7 @@
     "lint": "npm run lint:code && npm run lint:style",
     "lint:code": "eslint . -c .eslintrc.yaml --cache --cache-location .lint-cache/",
     "lint:style": "stylelint **/*.{htm,html,vue,css,scss,sass,pcss,postcss} --cache --cache-location .lint-cache/ --allow-empty-input",
-    "pkg:publish": "semantic-release",
+    "pkg:publish": "semantic-release --no-ci",
     "pkg:publish-test": "semantic-release --dry-run",
     "pkg:purge": "rimraf dist lib .coverage .lint-cache .npm node_modules",
     "prepare": "husky install & echo \"$INIT_CWD\" & (cp .editorconfig \"$INIT_CWD\" || true)"
