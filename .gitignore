@@ -1,0 +1,11 @@
+/test/
+
+/.npm/
+/.lint-cache/
+/node_modules/
+
+.DS_Store
+/.idea/
+*.iml
+.vscode/
+.history/

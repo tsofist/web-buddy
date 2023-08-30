@@ -1,0 +1,64 @@
+rules:
+  prefer-const: error
+  one-var:
+    - error
+    - never
+  no-multi-spaces: error
+  no-multiple-empty-lines:
+    - error
+    - max: 1
+      maxEOF: 0
+      maxBOF: 0
+  object-curly-spacing:
+    - error
+    - always
+
+  import/newline-after-import: error
+  import/no-duplicates: warn
+  import/order:
+    - error
+    - newlines-between: never
+      alphabetize:
+        order: asc
+        caseInsensitive: false
+      groups:
+        - builtin
+        - external
+        - internal
+        - parent
+        - sibling
+        - index
+
+  no-restricted-imports:
+    - error
+    - paths:
+        - name: lodash
+          message: NEVER IMPORT lodash. Use ONLY DIRECT lodash-es/<SOME-TOOL>
+        - name: lodash-es
+          message: NEVER IMPORT lodash-es. Use ONLY lodash-es/<SOME-TOOL>
+
+  quotes:
+    - error
+    - single
+    - allowTemplateLiterals: true
+      avoidEscape: true
+  quote-props:
+    - error
+    - consistent-as-needed
+
+  no-return-await: error
+
+  key-spacing:
+    - error
+  block-spacing:
+    - error
+  semi-spacing:
+    - error
+  keyword-spacing:
+    - error
+  space-before-blocks:
+    - error
+  brace-style:
+    - error
+  arrow-spacing:
+    - error

@@ -1,0 +1,20 @@
+parser: '@typescript-eslint/parser'
+
+parserOptions:
+  extraFilesExtension:
+    - .vue
+  project: tsconfig.json
+  sourceType: module
+
+plugins:
+  - import
+  - prettier
+  - '@typescript-eslint'
+  - decorator-position
+
+extends:
+  - eslint:recommended
+  - plugin:import/typescript
+  - plugin:@typescript-eslint/recommended
+  - ./rules.yaml
+  - ../shared.yaml

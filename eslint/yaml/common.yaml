@@ -1,0 +1,22 @@
+plugins:
+  - prettier
+
+extends:
+  - plugin:yml/standard
+  - ../shared.yaml
+
+rules:
+  prettier/prettier: error
+
+  yml/plain-scalar:
+    - error
+    - always
+  yml/indent: off
+  yml/quotes:
+    - error
+    - avoidEscape: true
+      prefer: single
+  yml/block-sequence-hyphen-indicator-newline:
+    - error
+    - never
+    - nestedHyphen: never

@@ -1,0 +1,36 @@
+defaultSeverity: error
+
+extends:
+  - stylelint-config-html
+  - stylelint-config-standard
+  - stylelint-config-standard-vue
+  - stylelint-config-standard-scss
+  - stylelint-config-standard-vue/scss
+  - stylelint-prettier
+
+plugins:
+  - stylelint-prettier
+  - stylelint-scss
+  - stylelint-order
+
+rules:
+  prettier/prettier: true
+  order/properties-alphabetical-order: true
+  no-empty-source: null
+  declaration-property-value-no-unknown: true
+  selector-pseudo-element-no-unknown:
+    - true
+    - ignorePseudoElements:
+        # for webpack
+        - v-deep
+        - v-slotted
+        - v-global
+        # for vite
+        - deep
+        - slotted
+        - global
+  scss/at-rule-no-unknown: null
+  scss/comment-no-empty: null
+
+ignoreFiles:
+  - '**/*.template.html'

@@ -1,0 +1,7 @@
+{
+  "extends": "./base",
+  "compilerOptions": {
+    "lib": ["es2020"],
+    "target": "es2020"
+  }
+}

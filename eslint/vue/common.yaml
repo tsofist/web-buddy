@@ -1,0 +1,35 @@
+parser: vue-eslint-parser
+
+parserOptions:
+  parser: '@typescript-eslint/parser'
+  ecmaVersion: 2020
+  extraFilesExtension:
+    - .vue
+  project: tsconfig.json
+  sourceType: module
+  vueFeatures:
+    filter: false
+    interpolationAsNonHTML: true
+
+plugins:
+  - import
+  - vue
+  - prettier-vue
+  - '@typescript-eslint'
+  - decorator-position
+
+extends:
+  - eslint:recommended
+  - plugin:import/typescript
+  - '@vue/eslint-config-typescript/recommended'
+  - plugin:vue/vue3-recommended
+  - ../typescript/rules.yaml
+  - ./rules.yaml
+  - ../shared.yaml
+
+globals:
+  NodeJS: readonly
+  defineProps: readonly
+  defineEmits: readonly
+  defineExpose: readonly
+  withDefaults: readonly

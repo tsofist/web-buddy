@@ -1,0 +1,78 @@
+rules:
+  prettier/prettier: error
+  '@typescript-eslint/explicit-member-accessibility':
+    - error
+    - accessibility: no-public
+  '@typescript-eslint/ban-types':
+    - warn
+    - extendDefaults: true
+      types:
+        Record:
+          message: 'Do not use the Record type: it can be unsafe. Use @tsofist/stem: PRec/Rec type instead (Your Stem. With LOVE)'
+          suggest:
+            - PRec
+            - Rec
+  '@typescript-eslint/explicit-module-boundary-types': off
+  '@typescript-eslint/no-explicit-any': off
+  '@typescript-eslint/no-non-null-assertion': off
+  '@typescript-eslint/no-this-alias': error
+  '@typescript-eslint/return-await': off
+  '@typescript-eslint/no-floating-promises': error
+  '@typescript-eslint/no-unnecessary-type-assertion': error
+  '@typescript-eslint/no-unnecessary-condition': off
+  '@typescript-eslint/no-misused-new': error
+  '@typescript-eslint/no-misused-promises': off
+  '@typescript-eslint/no-array-constructor': error
+  '@typescript-eslint/no-useless-constructor': error
+  '@typescript-eslint/adjacent-overload-signatures': error
+  '@typescript-eslint/consistent-type-assertions': error
+  '@typescript-eslint/semi': error
+  '@typescript-eslint/member-delimiter-style':
+    - error
+    - multiline:
+        delimiter: semi
+        requireLast: true
+      singleline:
+        delimiter: semi
+        requireLast: false
+
+  space-before-function-paren: off
+  '@typescript-eslint/space-before-function-paren':
+    - warn
+    - anonymous: always
+      named: never
+      asyncArrow: always
+
+  '@typescript-eslint/no-meaningless-void-operator': error
+
+  '@typescript-eslint/no-redundant-type-constituents': off
+
+  '@typescript-eslint/method-signature-style':
+    - error
+    - method
+
+  lines-between-class-members: off
+  '@typescript-eslint/lines-between-class-members':
+    - error
+    - always
+    - exceptAfterOverload: true
+      exceptAfterSingleLine: true
+
+  indent: off
+  '@typescript-eslint/indent': off # prettier
+
+  no-unused-vars: off
+  '@typescript-eslint/no-unused-vars': off
+
+  no-trailing-spaces:
+    - error
+
+  decorator-position/decorator-position:
+    - error
+    - properties: above
+      methods: above
+
+  space-in-parens: error
+
+  func-call-spacing: off
+  '@typescript-eslint/func-call-spacing': error

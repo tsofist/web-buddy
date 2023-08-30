@@ -1,0 +1,66 @@
+env:
+  browser: true
+  node: true
+
+parserOptions:
+  ecmaVersion: 2020
+  extraFileExtensions:
+    - .vue
+
+ignorePatterns:
+  - 'package*.json'
+  - '*.scss'
+  - '*.css'
+  - '*.html'
+  - '*.htm'
+  - '!.*.yml'
+  - '!.*.yaml'
+  - '!.*.json'
+  - '!.gitlab-ci'
+  - '!.k8s'
+
+plugins:
+  - import
+  - vue
+  - '@typescript-eslint'
+  - decorator-position
+
+settings:
+  import/extensions: [.ts, .tsx, .vue, .js, .json]
+  import/parsers:
+    '@typescript-eslint/parser': [.ts, .tsx, .vue]
+  prettier-vue:
+    SFCBlocks:
+      template: false
+      style: true
+      script: true
+
+overrides:
+  - files: ['*.json']
+    parser: '@typescript-eslint/parser'
+    plugins:
+      - prettier
+    extends:
+      - prettier
+      - ./eslint/shared.yaml
+    rules:
+      prettier/prettier: error
+      quotes: off
+      quote-props: off
+
+  - files: ['*.yaml', '*.yml']
+    extends:
+      - ./eslint/yaml/common.yaml
+
+  - files: ['*.vue']
+    extends:
+      - ./eslint/vue/common.yaml
+
+  - files: ['*.ts', '*.tsx']
+    extends:
+      - ./eslint/typescript/common.yaml
+
+  # todo?
+  - files: ['*.js', '*.jsx']
+    extends:
+      - ./eslint/typescript/common.yaml
