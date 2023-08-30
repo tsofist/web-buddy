@@ -53,8 +53,10 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "files": [
-    "lib"
-  ],
+  "release": {
+    "extends": [
+      "./.releaserc-github.json"
+    ]
+  },
   "keywords": []
 }
