@@ -13,6 +13,11 @@ plugins:
   - stylelint-scss
   - stylelint-order
 
+overrides:
+  - files:
+      - '*.html'
+    customSyntax: postcss-html
+
 rules:
   prettier/prettier: true
   order/properties-alphabetical-order: true
@@ -31,6 +36,3 @@ rules:
         - global
   scss/at-rule-no-unknown: null
   scss/comment-no-empty: null
-
-ignoreFiles:
-  - '**/*.template.html'
