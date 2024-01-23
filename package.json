@@ -19,8 +19,8 @@
     "@semantic-release/github": "^9.2.6",
     "@semantic-release/gitlab": "^12.1.1",
     "@semantic-release/npm": "^11.0.2",
-    "@typescript-eslint/eslint-plugin": "^6.19.0",
-    "@typescript-eslint/parser": "^6.19.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^12.0.0",
     "eslint": "^8.56.0",
@@ -42,7 +42,7 @@
     "stylelint-config-standard-vue": "^1.0.0",
     "stylelint-order": "^6.0.4",
     "stylelint-prettier": "^5.0.0",
-    "stylelint-scss": "^6.0.0",
+    "stylelint-scss": "^6.1.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
