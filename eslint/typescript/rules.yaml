@@ -8,7 +8,7 @@ rules:
     - extendDefaults: true
       types:
         Record:
-          message: 'Do not use the Record type: it can be unsafe. Use @tsofist/stem: PRec/Rec type instead (Your Stem. With LOVE)'
+          message: 'Avoid using the Record type as it may pose some risks. Instead, consider using the @tsofist/stem: PRec/Rec type (Your Stem. With LOVE).'
           suggest:
             - PRec
             - Rec
