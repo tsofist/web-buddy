@@ -23,6 +23,9 @@ All specified configurations are easily extensible, so simply use the configurat
 
 ```json
 {
+  "scripts": {
+    "prepare": "husky && (cp node_modules/@tsofist/web-buddy/.editorconfig \"$INIT_CWD\" || true)"
+  },
   "prettier": "./node_modules/@tsofist/web-buddy/.prettierrc.js",
   "stylelint": {
     "extends": "./node_modules/@tsofist/web-buddy/.stylelintrc.yaml"

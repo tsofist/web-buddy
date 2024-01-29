@@ -12,15 +12,15 @@
     "pkg:publish": "semantic-release --no-ci",
     "pkg:publish-test": "semantic-release --dry-run",
     "pkg:purge": "rimraf dist lib .coverage .lint-cache .npm node_modules",
-    "prepare": "husky install & echo \"$INIT_CWD\" & (cp .editorconfig \"$INIT_CWD\" || true)"
+    "prepare": "husky"
   },
   "dependencies": {
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^9.2.6",
     "@semantic-release/gitlab": "^12.1.1",
     "@semantic-release/npm": "^11.0.2",
-    "@typescript-eslint/eslint-plugin": "^6.19.1",
-    "@typescript-eslint/parser": "^6.19.1",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^12.0.0",
     "eslint": "^8.56.0",
@@ -32,7 +32,7 @@
     "eslint-plugin-prettier-vue": "^5.0.0",
     "eslint-plugin-vue": "^9.20.1",
     "eslint-plugin-yml": "^1.12.2",
-    "husky": "^8.0.3",
+    "husky": "^9.0.7",
     "postcss-html": "^1.6.0",
     "prettier": "^3.2.4",
     "semantic-release": "^22.0.12",
