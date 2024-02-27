@@ -3,8 +3,8 @@
   "compilerOptions": {
     "allowJs": true,
     "checkJs": false,
-    "noEmit": true,
+    "noEmit": true
   },
   "exclude": ["node_modules"],
-  "include": ["test", "test/**/*.vue"],
+  "include": ["test", "test/**/*.vue"]
 }
