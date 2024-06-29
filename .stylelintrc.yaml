@@ -23,6 +23,17 @@ rules:
   order/properties-alphabetical-order: true
   no-empty-source: null
   declaration-property-value-no-unknown: true
+  selector-pseudo-class-no-unknown:
+    - true
+    - ignorePseudoClasses:
+        # for webpack
+        - v-deep
+        - v-slotted
+        - v-global
+        # for vite
+        - deep
+        - slotted
+        - global
   selector-pseudo-element-no-unknown:
     - true
     - ignorePseudoElements:
