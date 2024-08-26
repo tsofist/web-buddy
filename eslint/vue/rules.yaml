@@ -6,8 +6,6 @@ rules:
   vue/multi-word-component-names: off
   vue/html-closing-bracket-newline:
     - error
-    - multiline: never
-      singleline: never
 
   indent: off
   '@typescript-eslint/indent': off
@@ -23,7 +21,7 @@ rules:
     - 4
     - alignAttributesVertically: true
       baseIndent: 1
-      closeBracket: 1
+      closeBracket: 0
 
   vue/max-attributes-per-line:
     - error
