@@ -54,3 +54,7 @@ rules:
         - OTHER_ATTR
         - EVENTS
         - CONTENT
+
+  vue/attribute-hyphenation:
+    - error
+    - always
