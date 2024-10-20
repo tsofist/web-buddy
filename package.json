@@ -30,7 +30,7 @@
     "eslint-plugin-json-format": "^2.0.1",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-prettier-vue": "^5.0.0",
-    "eslint-plugin-vue": "^9.29.0",
+    "eslint-plugin-vue": "^9.29.1",
     "eslint-plugin-yml": "^1.14.0",
     "husky": "^9.1.6",
     "postcss-html": "^1.7.0",
@@ -43,12 +43,12 @@
     "stylelint-config-standard-vue": "^1.0.0",
     "stylelint-order": "^6.0.4",
     "stylelint-prettier": "^5.0.2",
-    "stylelint-scss": "^6.7.0",
+    "stylelint-scss": "^6.8.1",
     "typescript": "~5.6.3"
   },
   "devDependencies": {
     "rimraf": "^6.0.1",
-    "tslib": "^2.7.0"
+    "tslib": "^2.8.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
