@@ -3,6 +3,8 @@ rules:
   '@typescript-eslint/explicit-member-accessibility':
     - error
     - accessibility: no-public
+
+  # todo https://typescript-eslint.io/rules/ban-types/
   '@typescript-eslint/ban-types':
     - warn
     - extendDefaults: true
@@ -12,6 +14,23 @@ rules:
           suggest:
             - PRec
             - Rec
+
+  # '@typescript-eslint/no-restricted-types':
+  #   - warn
+  #   - types:
+  #       Record:
+  #         message: 'Avoid using the Record type as it may pose some risks. Instead, consider using the @tsofist/stem: PRec/Rec type (Your Stem. With LOVE).'
+  #         suggest:
+  #           - PRec
+  #           - Rec
+
+  '@typescript-eslint/ban-ts-comment':
+    - error
+    - minimumDescriptionLength: 7
+      ts-expect-error: allow-with-description
+      ts-nocheck: allow-with-description
+      ts-ignore: true
+      ts-check: false
   '@typescript-eslint/explicit-module-boundary-types': off
   '@typescript-eslint/no-explicit-any': off
   '@typescript-eslint/no-non-null-assertion': off
@@ -49,7 +68,7 @@ rules:
 
   '@typescript-eslint/method-signature-style':
     - error
-    - method
+    - property
 
   lines-between-class-members: off
   '@typescript-eslint/lines-between-class-members':
@@ -76,3 +95,57 @@ rules:
 
   func-call-spacing: off
   '@typescript-eslint/func-call-spacing': error
+
+  '@typescript-eslint/unbound-method':
+    - error
+    - ignoreStatic: true
+
+  '@typescript-eslint/no-invalid-void-type':
+    - error
+    - allowAsThisParameter: true
+      allowInGenericTypeArguments: true
+
+  '@typescript-eslint/no-confusing-void-expression':
+    - error
+    - ignoreArrowShorthand: true
+      ignoreVoidOperator: true
+
+  '@typescript-eslint/restrict-plus-operands':
+    - error
+    - allowAny: false
+      allowBoolean: false
+      allowNullish: false
+      allowNumberAndString: false
+      allowRegExp: false
+
+  '@typescript-eslint/restrict-template-expressions':
+    - error
+    - allowAny: false
+      allowNullish: false
+      allowRegExp: false
+      allowNumber: true
+      allowBoolean: true
+      allowNever: true
+
+  '@typescript-eslint/no-wrapper-object-types': error
+
+  # It doesn’t work properly in some cases
+  '@typescript-eslint/unified-signatures': off
+
+  # It doesn’t work properly in some cases
+  '@typescript-eslint/no-unsafe-enum-comparison': off
+
+  # It breaks the annotation logic
+  '@typescript-eslint/no-duplicate-type-constituents': off
+
+  # It's fine in general
+  '@typescript-eslint/no-dynamic-delete': off
+
+  # It’s covered by the compilerOptions.strict setting
+  '@typescript-eslint/no-unsafe-assignment': off
+
+  # "stricter" rules -->
+  '@typescript-eslint/no-unsafe-argument': off
+  '@typescript-eslint/no-unsafe-member-access': off
+  '@typescript-eslint/no-unsafe-return': off
+  # <--

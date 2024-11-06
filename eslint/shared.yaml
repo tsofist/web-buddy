@@ -37,6 +37,8 @@ rules:
         - name: lodash-es
           message: NEVER IMPORT lodash-es. Use ONLY lodash-es/<SOME-TOOL>
 
+  no-new-wrappers: error
+
   quotes:
     - error
     - single
