@@ -15,6 +15,6 @@ plugins:
 extends:
   - eslint:recommended
   - plugin:import/typescript
-  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:@typescript-eslint/strict-type-checked
   - ./rules.yaml
   - ../shared.yaml
