@@ -1,0 +1,10 @@
+overrides:
+  - files: ['*.ts', '*.tsx']
+    extends:
+      - ./typescript/common.yaml
+      - ./typescript/stricter.rules.yaml
+
+  - files: ['*.vue']
+    extends:
+      - ./vue/common.yaml
+      - ./typescript/stricter.rules.yaml

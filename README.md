@@ -32,11 +32,26 @@ All specified configurations are easily extensible, so simply use the configurat
   },
   "eslintConfig": {
     "root": true,
-    "extends": "./node_modules/@tsofist/web-buddy/.eslintrc.yaml"
+    "extends": [
+      "./node_modules/@tsofist/web-buddy/.eslintrc.yaml"
+    ]
   },
   "release": {
     "extends": [
       "@tsofist/web-buddy/.releaserc.json"
+    ]
+  }
+}
+```
+
+Or for extra strictness:
+```json
+{
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "./node_modules/@tsofist/web-buddy/.eslintrc.yaml",
+      "./node_modules/@tsofist/web-buddy/eslint/stricter.extends.yaml"
     ]
   }
 }
