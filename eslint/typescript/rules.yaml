@@ -144,6 +144,11 @@ rules:
   # It’s covered by the compilerOptions.strict setting
   '@typescript-eslint/no-unsafe-assignment': off
 
+  '@typescript-eslint/no-extraneous-class':
+    - error
+    - allowWithDecorator: true
+      allowStaticOnly: true
+
   # "stricter" rules -->
   '@typescript-eslint/no-unsafe-argument': off
   '@typescript-eslint/no-unsafe-member-access': off
