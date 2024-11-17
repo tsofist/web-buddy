@@ -10,15 +10,15 @@
     "lint:code": "eslint . -c .eslintrc.yaml --cache --cache-location .lint-cache/",
     "lint:style": "stylelint **/*.{htm,html,vue,css,scss,sass,pcss,postcss} --cache --cache-location .lint-cache/ --allow-empty-input",
     "pkg:publish": "semantic-release --no-ci",
-    "pkg:publish-test": "semantic-release --dry-run",
+    "pkg:publish-test": "semantic-release --no-ci --dry-run",
     "pkg:purge": "rimraf dist lib .coverage .lint-cache .npm node_modules",
     "prepare": "husky"
   },
   "dependencies": {
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^9.2.6",
-    "@semantic-release/gitlab": "^12.1.1",
-    "@semantic-release/npm": "^11.0.3",
+    "@semantic-release/github": "^11.0.1",
+    "@semantic-release/gitlab": "^13.2.1",
+    "@semantic-release/npm": "^12.0.1",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "@vue/eslint-config-prettier": "^9.0.0",
@@ -35,7 +35,7 @@
     "husky": "^9.1.6",
     "postcss-html": "^1.7.0",
     "prettier": "^3.3.3",
-    "semantic-release": "^22.0.12",
+    "semantic-release": "^24.2.0",
     "stylelint": "^16.10.0",
     "stylelint-config-recommended-scss": "^14.1.0",
     "stylelint-config-standard": "^36.0.1",
@@ -53,6 +53,9 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "release": {
     "extends": [
