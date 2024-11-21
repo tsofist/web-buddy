@@ -144,6 +144,9 @@ rules:
   # It’s covered by the compilerOptions.strict setting
   '@typescript-eslint/no-unsafe-assignment': off
 
+  # It's works quirky in some cases
+  '@typescript-eslint/no-unsafe-call': off
+
   '@typescript-eslint/no-extraneous-class':
     - error
     - allowWithDecorator: true

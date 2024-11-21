@@ -58,3 +58,6 @@ rules:
   vue/attribute-hyphenation:
     - error
     - always
+
+  # It's works quirky with sfc-generics
+  '@typescript-eslint/no-unnecessary-type-arguments': off
