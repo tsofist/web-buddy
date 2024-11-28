@@ -1,10 +1,10 @@
 {
   "extends": "./base",
   "compilerOptions": {
-    "lib": ["dom", "es2020"],
-    "plugins": [],
-    "resolveJsonModule": true,
-    "target": "es2020",
-    "useDefineForClassFields": false
+    "isolatedModules": true
+  },
+  "vueCompilerOptions": {
+    "strictTemplates": true,
+    "allowImplicitTemplateReturnType": false
   }
 }

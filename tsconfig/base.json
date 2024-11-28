@@ -1,24 +1,17 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "declarationMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
-    "incremental": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
     "newLine": "lf",
     "noEmitOnError": true,
-    "noImplicitAny": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": false,
-    "sourceMap": true,
-    "strict": true
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "useDefineForClassFields": true
   },
   "exclude": ["node_modules"]
 }
