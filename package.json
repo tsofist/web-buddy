@@ -4,6 +4,7 @@
   "description": "Configuration basics for Linters, TypeScript, Semantic Release and others",
   "author": "Andrew Berdnikov <tsofistgudmen@gmail.com>",
   "license": "MIT",
+  "homepage": "https://github.com/tsofist/web-buddy/",
   "scripts": {
     "format": "npm run lint:code -- --fix && npm run lint:style -- --fix",
     "lint": "npm run lint:code && npm run lint:style",
