@@ -1,16 +1,17 @@
 {
   "compilerOptions": {
+    "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "newLine": "lf",
     "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "strict": true,
-    "noFallthroughCasesInSwitch": true,
     "useDefineForClassFields": true
   },
   "exclude": ["node_modules"]
