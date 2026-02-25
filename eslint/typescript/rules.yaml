@@ -106,7 +106,7 @@ rules:
       allowInGenericTypeArguments: true
 
   '@typescript-eslint/no-confusing-void-expression':
-    - error
+    - warn
     - ignoreArrowShorthand: true
       ignoreVoidOperator: true
 
