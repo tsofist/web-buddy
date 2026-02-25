@@ -4,7 +4,8 @@
     "master",
     { "name": "next", "prerelease": true },
     { "name": "stage", "prerelease": true },
-    { "name": "dev", "prerelease": true }
+    { "name": "dev", "prerelease": true },
+    { "name": "wip/*", "channel": "wip", "prerelease": "${name.replace(/^wip\\//, 'wip.')}" }
   ],
   "plugins": [
     "@semantic-release/commit-analyzer",
