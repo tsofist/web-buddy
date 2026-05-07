@@ -1,10 +1,16 @@
 {
-  "extends": "./tsconfig/browser",
+  "extends": "./src/tsconfig/config.base.json",
   "compilerOptions": {
     "allowJs": true,
-    "checkJs": false,
-    "noEmit": true
+    "checkJs": true,
+    "experimentalDecorators": true,
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "noEmit": true,
+    "outDir": "lib",
+    "rootDir": "src",
+    "target": "ES2022",
+    "types": ["node"]
   },
-  "exclude": ["node_modules"],
-  "include": ["test", "test/**/*.vue"]
+  "include": ["src", "test-resources", "./*.config.mjs"]
 }

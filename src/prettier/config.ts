@@ -1,4 +1,4 @@
-module.exports = {
+export const WebBuddyPrettierConfig = {
     arrowParens: 'always',
     printWidth: 100,
     quoteProps: 'consistent',
@@ -27,11 +27,14 @@ module.exports = {
             },
         },
         {
-            files: '*.json',
+            files: '*.{json,jsonc,json5}',
             parser: 'json',
             options: {
                 tabWidth: 2,
+                trailingComma: 'none',
             },
         },
     ],
 };
+
+export default WebBuddyPrettierConfig;
