@@ -13,7 +13,6 @@
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "strict": true,
-    "useDefineForClassFields": true,
-    "verbatimModuleSyntax": true
+    "useDefineForClassFields": true
   }
 }

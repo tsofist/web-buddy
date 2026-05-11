@@ -1,10 +1,11 @@
 {
   "extends": "./config.base.json",
   "compilerOptions": {
-    "isolatedModules": true
+    "isolatedModules": true,
+    "verbatimModuleSyntax": false
   },
   "vueCompilerOptions": {
-    "strictTemplates": true,
-    "allowImplicitTemplateReturnType": false
+    "allowImplicitTemplateReturnType": false,
+    "strictTemplates": true
   }
 }

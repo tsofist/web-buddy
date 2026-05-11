@@ -15,6 +15,7 @@ https://eslint.vuejs.org/rules/script-indent
 */
 
 export const WebBuddyESLintTypeScriptRules: ESLintRuleSet = {
+    '@typescript-eslint/no-empty-object-type': 'off', // harmful
     '@typescript-eslint/consistent-indexed-object-style': 'off', // harmful
     '@typescript-eslint/no-inferrable-types': 'off', // harmful
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
