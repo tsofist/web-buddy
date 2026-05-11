@@ -15,6 +15,8 @@ https://eslint.vuejs.org/rules/script-indent
 */
 
 export const WebBuddyESLintTypeScriptRules: ESLintRuleSet = {
+    '@typescript-eslint/prefer-nullish-coalescing': 'warn',
+    '@typescript-eslint/no-deprecated': 'warn',
     '@typescript-eslint/no-empty-object-type': 'off', // harmful
     '@typescript-eslint/consistent-indexed-object-style': 'off', // harmful
     '@typescript-eslint/no-inferrable-types': 'off', // harmful
