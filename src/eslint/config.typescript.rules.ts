@@ -56,7 +56,7 @@ export const WebBuddyESLintTypeScriptRules: ESLintRuleSet = {
     '@typescript-eslint/no-this-alias': 'error',
     '@typescript-eslint/return-await': 'off',
     '@typescript-eslint/no-floating-promises': 'error',
-    '@typescript-eslint/no-unnecessary-type-assertion': 'error',
+    '@typescript-eslint/no-unnecessary-type-assertion': 'off', // harmful
     '@typescript-eslint/no-misused-new': 'error',
     '@typescript-eslint/no-misused-promises': 'off',
     '@typescript-eslint/no-array-constructor': 'error',
