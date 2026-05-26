@@ -15,14 +15,18 @@ import { WebBuddyESLintIgnores } from './ignores.js';
 export default createWebBuddyESLintConfig();
 
 export function createWebBuddyESLintConfig(): WebBuddyESLintConfig {
-    return defineConfig(
+    return defineConfig(...createWebBuddyESLintConfigChain());
+}
+
+export function createWebBuddyESLintConfigChain(): ESLintConfigChain {
+    return [
         ...createWebBuddyESLintConfigGeneralChain(),
         ...WebBuddyESLintJSON,
         WebBuddyESLintTypeScript,
         WebBuddyESLintVue,
         ...WebBuddyESLintFrameworkSpecificConfigForMercurio,
         WebBuddyESLintYAML,
-    );
+    ];
 }
 
 function createWebBuddyESLintConfigGeneralChain(): ESLintConfigChain {
