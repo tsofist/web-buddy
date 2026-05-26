@@ -27,7 +27,9 @@ export const WebBuddyESLintTypeScript: ESLintConfigChainElement = {
         sourceType: 'module',
         parser: epTS.parser,
         parserOptions: {
-            projectService: true,
+            projectService: {
+                allowDefaultProject: ['jest-setup.ts', '*.jest-setup.ts'],
+            },
             extraFileExtensions: WebBuddyESLintVueExtraFileExtensions,
         },
     },

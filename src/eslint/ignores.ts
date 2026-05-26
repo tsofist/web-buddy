@@ -35,7 +35,4 @@ export const WebBuddyESLintIgnores: string[] = [
     './spec/*.schema*.json',
     './spec/*.openapi.json',
     './spec/*.dbml.json',
-    //
-    './jest-setup.ts',
-    './*.jest-setup.ts',
 ];
