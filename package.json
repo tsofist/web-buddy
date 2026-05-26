@@ -1,6 +1,6 @@
 {
   "name": "@tsofist/web-buddy",
-  "version": "2.0.0-next.5",
+  "version": "2.0.0-next.6",
   "description": "Configuration basics for Linters, TypeScript, Semantic Release and others",
   "type": "module",
   "author": "Andrew Berdnikov <tsofistgudmen@gmail.com>",
