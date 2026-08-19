@@ -64,7 +64,6 @@ export const WebBuddyESLintTypeScriptRules: ESLintRuleSet = {
     '@typescript-eslint/adjacent-overload-signatures': 'error',
     '@typescript-eslint/consistent-type-assertions': 'error',
 
-    'semi': 'error',
     '@stylistic/semi': ['error', 'always'],
 
     '@stylistic/member-delimiter-style': [

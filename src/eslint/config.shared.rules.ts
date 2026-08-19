@@ -3,6 +3,7 @@ import type { ESLintRuleSet } from '../types.js';
 export const WebBuddyESLintVueExtraFileExtensions = ['.vue'] as const;
 
 export const WebBuddyESLintRulesShared: ESLintRuleSet = {
+    'semi': 'error',
     'object-shorthand': ['error', 'properties'],
     'spaced-comment': ['error', 'always', { block: { balanced: true } }],
     //
@@ -58,6 +59,19 @@ export const WebBuddyESLintRulesShared: ESLintRuleSet = {
                 caseInsensitive: false,
             },
             'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+        },
+    ],
+    'no-restricted-syntax': [
+        'error',
+        {
+            selector:
+                "BinaryExpression[operator='==='][right.type='Identifier'][right.name='undefined']",
+            message: 'Do not compare directly to undefined. Use == null instead.',
+        },
+        {
+            selector:
+                "BinaryExpression[operator='==='][left.type='Identifier'][left.name='undefined']",
+            message: 'Do not compare directly to undefined. Use == null instead.',
         },
     ],
 };

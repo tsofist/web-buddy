@@ -18,12 +18,31 @@ tab_width = 2
 # Markdown
 [*.{md,markdown}]
 trim_trailing_whitespace = false
+indent_size = 2
+tab_width = 2
 
 # Makefile
 [Makefile]
 indent_style = tab
 indent_size = 4
 tab_width = 4
+
+[*.{sh,bat}]
+indent_size = 2
+tab_width = 2
+
+[*.{conf,ini}]
+indent_size = 4
+tab_width = 4
+
+[*.http]
+indent_size = 4
+tab_width = 4
+
+# https://docs.ollama.com/modelfile
+[{Containerfile,Dockerfile,Modelfile}]
+indent_size = 2
+tab_width = 2
 
 # Classic web
 [*.{html,pcss,postcss,css,scss,sass}]

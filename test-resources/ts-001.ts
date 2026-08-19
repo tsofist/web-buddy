@@ -24,3 +24,8 @@ export class ClassA {
 
 /** Type alias for number */
 type Int = number;
+
+// eslint-disable-next-line no-restricted-syntax
+if ((undefined as any) === undefined) {
+    //
+}
