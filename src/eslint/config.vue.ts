@@ -33,7 +33,10 @@ export const WebBuddyESLintVue: ESLintConfigChainElement = {
     languageOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
-        globals: globals.browser, // todo others?
+        globals: {
+            // todo others?
+            ...globals.browser,
+        },
         parserOptions: {
             parser: epTS.parser,
             projectService: true,

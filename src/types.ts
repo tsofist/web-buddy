@@ -6,7 +6,7 @@ export type WebBuddyESLintConfig = RO<ReturnType<ESLintDefineConfig>>;
 // eslint-disable-next-line @typescript-eslint/no-restricted-types
 export type ESLintRuleSet = Record<string, Linter.RuleEntry>;
 export type ESLintConfigChainElement = Parameters<ESLintDefineConfig>[number];
-export type ESLintConfigChain = readonly ESLintConfigChainElement[];
+export type ESLintConfigChain = ESLintConfigChainElement[];
 
 export type StylelintRuleSet = {
     [rule in string]: null | boolean | [boolean, object];

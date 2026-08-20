@@ -98,6 +98,8 @@ export const WebBuddyESLintTypeScriptRules: ESLintRuleSet = {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'off', // by tsc
 
+    'no-useless-assignment': 'off', // by tsc
+
     'no-trailing-spaces': 'off',
 
     '@stylistic/space-in-parens': 'error',

@@ -3,6 +3,7 @@ import epStylistic from '@stylistic/eslint-plugin';
 import { defineConfig } from 'eslint/config';
 import { importX as epImportX } from 'eslint-plugin-import-x';
 import epPrettier from 'eslint-plugin-prettier';
+import globals from 'globals';
 import type { ESLintConfigChain, WebBuddyESLintConfig } from '../types.js';
 import { WebBuddyESLintFrameworkSpecificConfigForMercurio } from './config.fws-mercurio.js';
 import { WebBuddyESLintJSON } from './config.json.js';
@@ -14,8 +15,12 @@ import { WebBuddyESLintIgnores } from './ignores.js';
 
 export default createWebBuddyESLintConfig();
 
-export function createWebBuddyESLintConfig(): WebBuddyESLintConfig {
-    return defineConfig(...createWebBuddyESLintConfigChain());
+export function createWebBuddyESLintConfig(
+    onChain?: (chain: ESLintConfigChain) => ESLintConfigChain,
+): WebBuddyESLintConfig {
+    let chain = createWebBuddyESLintConfigChain();
+    if (onChain) chain = onChain(chain);
+    return defineConfig(...chain);
 }
 
 export function createWebBuddyESLintConfigChain(): ESLintConfigChain {
@@ -41,6 +46,18 @@ function createWebBuddyESLintConfigGeneralChain(): ESLintConfigChain {
             },
             settings: {
                 'import-x/resolver': { typescript: true },
+            },
+        },
+
+        {
+            // todo manage?
+            files: ['**/*.{js,cjs,mjs,jsx}'],
+            languageOptions: {
+                globals: {
+                    ...globals.browser,
+                    ...globals.node,
+                    ...globals.jest,
+                },
             },
         },
 

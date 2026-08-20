@@ -12,14 +12,16 @@ export const WebBuddyESLintIgnores: string[] = [
     '!.*.yaml',
     '!.*.json',
     //
-    '*.tmp.*',
-    '*.private.*',
-    '*.tmp/',
-    '*.private/',
+    '**/*.tmp.*',
+    '**/*.private.*',
+    '**/*.tmp/',
+    '**/*.private/',
     //
     '.husky/_/',
+    //
     './.cache/',
     './.*-cache/',
+    //
     './.coverage/',
     //
     './dist/',
