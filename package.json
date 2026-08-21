@@ -1,6 +1,6 @@
 {
   "name": "@tsofist/web-buddy",
-  "version": "2.0.0-next.10",
+  "version": "2.0.0-next.11",
   "description": "Configuration basics for Linters, TypeScript, Semantic Release and others",
   "type": "module",
   "author": "Andrew Berdnikov <tsofistgudmen@gmail.com>",
@@ -83,7 +83,9 @@
   "lockfile-lint": {
     "type": "npm",
     "path": "package-lock.json",
-    "allowedHosts": ["npm"],
+    "allowedHosts": [
+      "npm"
+    ],
     "validateHttps": true,
     "validateIntegrity": true
   }
