@@ -62,7 +62,7 @@ export const WebBuddyESLintRulesShared: ESLintRuleSet = {
         },
     ],
     'no-restricted-syntax': [
-        'error',
+        'warn',
         {
             selector:
                 "BinaryExpression[operator='==='][right.type='Identifier'][right.name='undefined']",

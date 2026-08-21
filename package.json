@@ -10,9 +10,10 @@
     "build": "rm -rf lib && tsc -p tsconfig.build.json",
     "format": "npm run lint:code -- --fix && npm run lint:style -- --fix",
     "test": "npm run build && npm run lint",
-    "lint": "npm run lint:code && npm run lint:style",
+    "lint": "npm run lint:code && npm run lint:style && npm run lint:lock-file",
     "lint:code": "WEB_BUDDY_LINT_STRICTER=1 eslint . --cache --cache-location .cache/",
     "lint:style": "stylelint **/*.{htm,html,vue,css,scss,sass,pcss,postcss} --cache --cache-location .cache/ --allow-empty-input",
+    "lint:lock-file": "lockfile-lint",
     "pkg:publish": "semantic-release --no-ci",
     "pkg:publish-test": "semantic-release --no-ci --dry-run",
     "pkg:clean": "rm -rf dist lib .coverage .cache",
@@ -38,6 +39,7 @@
     "eslint-plugin-yml": "^3.8.1",
     "globals": "^17.11.0",
     "husky": "^9.1.7",
+    "lockfile-lint": "^5.0.1",
     "postcss-html": "^2.0.0",
     "prettier": "^3.9.6",
     "semantic-release": "^25.0.9",
@@ -70,12 +72,19 @@
   "engines": {
     "node": ">=22.12"
   },
-  "release": {
-    "extends": "./lib/semantic-release/config.github.js"
-  },
   "keywords": [
     "eslint",
     "web-config",
     "linting"
-  ]
+  ],
+  "release": {
+    "extends": "./lib/semantic-release/config.github.js"
+  },
+  "lockfile-lint": {
+    "type": "npm",
+    "path": "package-lock.json",
+    "allowedHosts": ["npm"],
+    "validateHttps": true,
+    "validateIntegrity": true
+  }
 }

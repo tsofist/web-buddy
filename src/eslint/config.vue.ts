@@ -4,7 +4,7 @@ import { importX as epImportX } from 'eslint-plugin-import-x';
 import epVue from 'eslint-plugin-vue';
 import globals from 'globals';
 import epTS from 'typescript-eslint';
-import type { ESLintConfigChainElement } from '../types.js';
+import type { ESLintConfigChainItem } from '../types.js';
 import {
     WebBuddyESLintRulesShared,
     WebBuddyESLintVueExtraFileExtensions,
@@ -15,7 +15,7 @@ import { WebBuddyESLintVueRules } from './config.vue.rules.js';
 /**
  * @see https://github.com/oxc-project/oxc/issues/15761 TODO: oxc migration blocker
  */
-export const WebBuddyESLintVue: ESLintConfigChainElement = {
+export const WebBuddyESLintVue: ESLintConfigChainItem = {
     files: ['**/*.vue'],
     extends: [
         epJS.configs.recommended,

@@ -1,3 +1,5 @@
+import type { ESLintConfigChain, ESLintConfigChainItem } from '../types.js';
+
 export const WebBuddyESLintIgnores: string[] = [
     //
     'package*.json',
@@ -38,3 +40,23 @@ export const WebBuddyESLintIgnores: string[] = [
     './spec/*.openapi.json',
     './spec/*.dbml.json',
 ];
+
+export function appendESLintIgnores(
+    ignores: string[],
+    chain: ESLintConfigChain,
+    matcher: typeof matchIgnores = matchIgnores,
+): ESLintConfigChain {
+    const list = chain.find(matcher)?.ignores;
+
+    if (list) {
+        list.push(...ignores);
+    } else {
+        chain.unshift({ ignores });
+    }
+
+    return chain;
+}
+
+function matchIgnores(item: ESLintConfigChainItem): boolean {
+    return Array.isArray(item.ignores) && item.files == null;
+}

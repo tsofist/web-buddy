@@ -36,7 +36,16 @@ export function createWebBuddyESLintConfigChain(): ESLintConfigChain {
 
 function createWebBuddyESLintConfigGeneralChain(): ESLintConfigChain {
     return [
-        { ignores: WebBuddyESLintIgnores },
+        {
+            linterOptions: {
+                reportUnusedDisableDirectives: 'error',
+                reportUnusedInlineConfigs: 'error',
+            },
+        },
+
+        {
+            ignores: WebBuddyESLintIgnores,
+        },
 
         {
             plugins: {

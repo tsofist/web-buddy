@@ -2,14 +2,14 @@ import epJS from '@eslint/js';
 import epDecoratorPosition from 'eslint-plugin-decorator-position/config/recommended';
 import { importX as epImportX } from 'eslint-plugin-import-x';
 import epTS from 'typescript-eslint';
-import type { ESLintConfigChainElement } from '../types.js';
+import type { ESLintConfigChainItem } from '../types.js';
 import {
     WebBuddyESLintRulesShared,
     WebBuddyESLintVueExtraFileExtensions,
 } from './config.shared.rules.js';
 import { WebBuddyESLintTypeScriptRules } from './config.typescript.rules.js';
 
-export const WebBuddyESLintTypeScript: ESLintConfigChainElement = {
+export const WebBuddyESLintTypeScript: ESLintConfigChainItem = {
     files: ['**/*.{ts,mts,tsx}'],
     extends: [
         epJS.configs.recommended,

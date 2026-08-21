@@ -15,7 +15,16 @@ https://eslint.vuejs.org/rules/script-indent
 */
 
 export const WebBuddyESLintTypeScriptRules: ESLintRuleSet = {
-    '@typescript-eslint/prefer-nullish-coalescing': 'warn',
+    '@typescript-eslint/prefer-optional-chain': 'off', // noisy
+    '@typescript-eslint/prefer-nullish-coalescing': [
+        'warn',
+        {
+            ignoreIfStatements: true,
+            ignorePrimitives: {
+                string: true,
+            },
+        },
+    ],
     '@typescript-eslint/no-deprecated': 'warn',
     '@typescript-eslint/no-empty-object-type': 'off', // harmful
     '@typescript-eslint/consistent-indexed-object-style': 'off', // harmful
@@ -148,8 +157,24 @@ export const WebBuddyESLintTypeScriptRules: ESLintRuleSet = {
         { allowWithDecorator: true, allowStaticOnly: true },
     ],
 
-    '@typescript-eslint/no-wrapper-object-types': 'error',
+    '@typescript-eslint/dot-notation': [
+        'warn',
+        {
+            allowPattern: '^([_A-Z]+)$',
+            allowIndexSignaturePropertyAccess: true,
+        },
+    ],
 
+    '@typescript-eslint/no-wrapper-object-types': 'error',
+    '@typescript-eslint/no-base-to-string': 'warn',
+    '@typescript-eslint/no-unused-expressions': [
+        'error',
+        {
+            allowShortCircuit: true,
+        },
+    ],
+
+    '@typescript-eslint/no-unsafe-function-type': 'warn', // noisy
     '@typescript-eslint/unified-signatures': 'off', // odd
     '@typescript-eslint/no-unsafe-enum-comparison': 'off', // odd
     '@typescript-eslint/no-duplicate-type-constituents': 'off', // odd
