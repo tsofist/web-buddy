@@ -1,9 +1,6 @@
-import type { ESLintRuleSet } from '../types.js';
+import { defineESLintRules } from './define-rules.js';
 
-/**
- * @see https://github.com/oxc-project/oxc/issues/15761 TODO: oxc migration blocker
- */
-export const WebBuddyESLintVueRules: ESLintRuleSet = {
+export const WebBuddyESLintVueRules = defineESLintRules({
     'prettier/prettier': 'off', // !
     //
     'vue/multi-word-component-names': 'off',
@@ -60,4 +57,7 @@ export const WebBuddyESLintVueRules: ESLintRuleSet = {
     ],
     'vue/attribute-hyphenation': ['error', 'always'],
     '@typescript-eslint/no-unnecessary-type-arguments': 'off', // odd
-};
+});
+
+// TODO: oxc migration blocker
+//   https://github.com/oxc-project/oxc/issues/15761

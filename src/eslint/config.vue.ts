@@ -43,9 +43,11 @@ export const WebBuddyESLintVue: ESLintConfigChainItem = {
             extraFileExtensions: WebBuddyESLintVueExtraFileExtensions,
         },
     },
-    rules: {
-        ...WebBuddyESLintRulesShared,
-        ...WebBuddyESLintTypeScriptRules,
-        ...WebBuddyESLintVueRules,
+    get rules() {
+        return {
+            ...WebBuddyESLintRulesShared,
+            ...WebBuddyESLintTypeScriptRules.values,
+            ...WebBuddyESLintVueRules.values,
+        };
     },
 };

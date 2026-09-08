@@ -40,8 +40,10 @@ export const WebBuddyESLintTypeScript: ESLintConfigChainItem = {
             extraFileExtensions: WebBuddyESLintVueExtraFileExtensions,
         },
     },
-    rules: {
-        ...WebBuddyESLintRulesShared,
-        ...WebBuddyESLintTypeScriptRules,
+    get rules() {
+        return {
+            ...WebBuddyESLintRulesShared,
+            ...WebBuddyESLintTypeScriptRules.values,
+        };
     },
 };

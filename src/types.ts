@@ -4,7 +4,8 @@ import type { defineConfig } from 'eslint/config';
 
 export type WebBuddyESLintConfig = RO<ReturnType<ESLintDefineConfig>>;
 
-// eslint-disable-next-line @typescript-eslint/no-restricted-types
+export type WebBuddyStrictFeature = 'unsafe-fn';
+
 export type ESLintRuleSet = Record<string, Linter.RuleEntry>;
 export type ESLintConfigChainItem = ConfigWithExtends;
 export type ESLintConfigChain = ConfigWithExtends[];
