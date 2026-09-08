@@ -1,6 +1,4 @@
 {
   "extends": "./config.base.json",
-  "compilerOptions": {
-    "incremental": true
-  }
+  "compilerOptions": {}
 }

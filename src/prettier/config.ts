@@ -36,5 +36,3 @@ export const WebBuddyPrettierConfig = {
         },
     ],
 };
-
-export default WebBuddyPrettierConfig;

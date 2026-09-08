@@ -19,5 +19,3 @@ export const WebBuddyStylelintConfig = {
     ],
     rules: WebBuddyStylelintRules,
 };
-
-export default WebBuddyStylelintConfig;

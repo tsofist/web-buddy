@@ -13,17 +13,15 @@ import { WebBuddyESLintVue } from './config.vue.js';
 import { WebBuddyESLintYAML } from './config.yaml.js';
 import { WebBuddyESLintIgnores } from './ignores.js';
 
-export default createWebBuddyESLintConfig();
-
 export function createWebBuddyESLintConfig(
-    onChain?: (chain: ESLintConfigChain) => ESLintConfigChain,
+    onDefaults?: (chain: ESLintConfigChain) => ESLintConfigChain,
 ): WebBuddyESLintConfig {
-    let chain = createWebBuddyESLintConfigChain();
-    if (onChain) chain = onChain(chain);
+    let chain = createWebBuddyESLintConfigDefaultChain();
+    if (onDefaults) chain = onDefaults(chain);
     return defineConfig(...chain);
 }
 
-export function createWebBuddyESLintConfigChain(): ESLintConfigChain {
+export function createWebBuddyESLintConfigDefaultChain(): ESLintConfigChain {
     return [
         ...createWebBuddyESLintConfigGeneralChain(),
         ...WebBuddyESLintJSON,

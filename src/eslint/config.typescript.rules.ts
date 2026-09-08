@@ -1,18 +1,5 @@
-import { WebBuddyStricterMode } from '../stricter-mode.js';
+import { isWebBuddyStrictFor } from '../mode.js';
 import type { ESLintRuleSet } from '../types.js';
-
-/*
-TODO!
-
-https://github.com/typescript-eslint/typescript-eslint/issues/8700
-https://typescript-eslint.io/rules/ban-types/
-https://typescript-eslint.io/rules/no-empty-object-type/
-
-https://typescript-eslint.io/rules/no-unnecessary-type-assertion/
-
-https://eslint.vuejs.org/rules/script-indent
-
-*/
 
 export const WebBuddyESLintTypeScriptRules: ESLintRuleSet = {
     '@typescript-eslint/prefer-optional-chain': 'off', // noisy
@@ -187,10 +174,20 @@ export const WebBuddyESLintTypeScriptRules: ESLintRuleSet = {
     '@typescript-eslint/no-unsafe-return': 'off', // strict
 };
 
-if (WebBuddyStricterMode) {
+if (isWebBuddyStrictFor()) {
     Object.assign(WebBuddyESLintTypeScriptRules, {
         '@typescript-eslint/no-unsafe-argument': 'error',
         '@typescript-eslint/no-unsafe-return': 'error',
         '@typescript-eslint/no-unsafe-member-access': 'off', // odd
     } satisfies ESLintRuleSet);
 }
+
+/*
+todo: recheck this
+
+https://github.com/typescript-eslint/typescript-eslint/issues/8700
+https://typescript-eslint.io/rules/ban-types/
+https://typescript-eslint.io/rules/no-empty-object-type/
+https://typescript-eslint.io/rules/no-unnecessary-type-assertion/
+https://eslint.vuejs.org/rules/script-indent
+*/

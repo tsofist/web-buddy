@@ -1,3 +1,3 @@
-import config from './lib/stylelint/config.js';
+import { WebBuddyStylelintConfig } from './lib/stylelint/config.js';
 
-export default config;
+export default WebBuddyStylelintConfig;
