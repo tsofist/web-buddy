@@ -36,6 +36,7 @@ export const WebBuddyESLintIgnores: string[] = [
     '.vscode/',
     '.history/',
     //
+    './spec/*.services-map.json',
     './spec/*.schema*.json',
     './spec/*.openapi.json',
     './spec/*.dbml.json',
