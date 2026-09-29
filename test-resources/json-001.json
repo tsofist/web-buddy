@@ -1,0 +1,22 @@
+{
+  "Rosakhutor stage: dev": {
+    "apiBaseURL": "https://dev.stage.rosakhutor.ru/api/mas/",
+    "auth": {
+      "authority": "su",
+      "credentials": "local"
+    }
+  },
+  "Local": {
+    "apiBaseURL": "http://127.0.0.1:3000/",
+    "auth": {
+      "plain": {
+        "authority": "su",
+        "credentials": "local"
+      },
+      "rkl:sms": {
+        "authority": "+71111111111",
+        "credentials": "0137"
+      }
+    }
+  }
+}

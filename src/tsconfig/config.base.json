@@ -4,6 +4,7 @@
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "newLine": "lf",
+    "noEmitHelpers": true,
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
@@ -13,6 +14,5 @@
     "resolveJsonModule": true,
     "strict": true,
     "useDefineForClassFields": true
-  },
-  "exclude": ["node_modules"]
+  }
 }
