@@ -1,4 +1,5 @@
 set -eu
 
+npm run pkg:audit
 npm run test
 npm run lint

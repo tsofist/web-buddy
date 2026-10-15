@@ -18,6 +18,7 @@
     "pkg:publish-test": "semantic-release --no-ci --dry-run",
     "pkg:clean": "rm -rf dist lib .coverage .cache",
     "pkg:purge": "npm run pkg:clean && rm -rf .npm node_modules",
+    "pkg:audit": "npm audit --omit=dev --audit-level=critical",
     "prepare": "husky"
   },
   "dependencies": {
