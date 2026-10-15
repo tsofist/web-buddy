@@ -4,7 +4,7 @@
     "allowJs": true,
     "checkJs": true,
     "experimentalDecorators": true,
-    "module": "NodeNext",
+    "module": "nodenext",
     "moduleResolution": "nodenext",
     "noEmit": true,
     "outDir": "lib",
