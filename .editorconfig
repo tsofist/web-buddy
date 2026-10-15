@@ -1,65 +1,230 @@
 [*]
 charset = utf-8
 end_of_line = lf
+indent_size = 4
 indent_style = space
-indent_size = 2
-tab_width = 2
 insert_final_newline = true
+max_line_length = 120
+tab_width = 4
 trim_trailing_whitespace = true
+ij_continuation_indent_size = 4
+ij_formatter_off_tag = @formatter:off
+ij_formatter_on_tag = @formatter:on
+ij_formatter_tags_enabled = true
+ij_smart_tabs = false
+ij_visual_guides = 100
+ij_wrap_on_typing = false
 
-[*.json]
-indent_size = 2
+[{*.graphqlconfig,*.graphqlrc,*.har,*.json,*.jsonc,*.lot,*.postman_collection,*.postman_collection.json,*.postman_environment,*.postman_environment.json,.prettierrc,.stylelintrc,composer.lock}]
 tab_width = 2
-
-[*.{yaml,yml}]
 indent_size = 2
-tab_width = 2
+ij_continuation_indent_size = 2
+ij_json_array_wrapping = on_every_item
+ij_json_keep_blank_lines_in_code = 0
+ij_json_keep_indents_on_empty_lines = false
+ij_json_keep_line_breaks = true
+ij_json_keep_trailing_comma = false
+ij_json_object_wrapping = on_every_item
+ij_json_property_alignment = do_not_align
+ij_json_space_after_colon = true
+ij_json_space_after_comma = true
+ij_json_space_before_colon = false
+ij_json_space_before_comma = false
+ij_json_spaces_within_braces = false
+ij_json_spaces_within_brackets = false
+ij_json_wrap_long_lines = false
 
-# Markdown
-[*.{md,markdown}]
+[{*.yaml,*.yml}]
+tab_width = 2
+indent_size = 2
+ij_continuation_indent_size = 2
+ij_yaml_align_values_properties = do_not_align
+ij_yaml_autoinsert_sequence_marker = true
+ij_yaml_block_mapping_on_new_line = false
+ij_yaml_indent_sequence_value = true
+ij_yaml_keep_indents_on_empty_lines = false
+ij_yaml_keep_line_breaks = true
+ij_yaml_line_comment_add_space = false
+ij_yaml_line_comment_add_space_on_reformat = false
+ij_yaml_line_comment_at_first_column = false
+ij_yaml_sequence_on_new_line = false
+ij_yaml_space_before_colon = false
+ij_yaml_spaces_within_braces = true
+ij_yaml_spaces_within_brackets = true
+
+[{*.markdown,*.md}]
 trim_trailing_whitespace = false
-indent_size = 2
 tab_width = 2
+indent_size = 2
+ij_continuation_indent_size = 2
+ij_markdown_force_one_space_after_blockquote_symbol = true
+ij_markdown_force_one_space_after_header_symbol = true
+ij_markdown_force_one_space_after_list_bullet = true
+ij_markdown_force_one_space_between_words = true
+ij_markdown_format_tables = true
+ij_markdown_insert_quote_arrows_on_wrap = true
+ij_markdown_keep_indents_on_empty_lines = false
+ij_markdown_keep_line_breaks_inside_text_blocks = true
+ij_markdown_max_lines_around_block_elements = 1
+ij_markdown_max_lines_around_header = 1
+ij_markdown_max_lines_between_paragraphs = 1
+ij_markdown_min_lines_around_block_elements = 0
+ij_markdown_min_lines_around_header = 1
+ij_markdown_min_lines_between_paragraphs = 1
+ij_markdown_wrap_text_if_long = true
+ij_markdown_wrap_text_inside_blockquotes = true
 
-# Makefile
-[Makefile]
+[{*.mk,GNUmakefile,GNUmakefile.inc,Makefile,makefile,makefile.inc}]
 indent_style = tab
-indent_size = 4
-tab_width = 4
 
-[*.{sh,bat}]
-indent_size = 2
+[{*.bash,*.sh,*.zsh}]
 tab_width = 2
-
-[*.{conf,ini}]
-indent_size = 4
-tab_width = 4
-
-[*.http]
-indent_size = 4
-tab_width = 4
-
-# https://docs.ollama.com/modelfile
-[{Containerfile,Dockerfile,Modelfile}]
 indent_size = 2
+ij_continuation_indent_size = 2
+
+[{Containerfile,*.Containerfile,Dockerfile,*.Dockerfile,Modelfile}]
 tab_width = 2
+indent_size = 2
+ij_continuation_indent_size = 2
 
-# Classic web
-[*.{html,pcss,postcss,css,scss,sass}]
-indent_size = 4
-tab_width = 4
-
-# JavaScript/TypeScript
-[*.{js,ts,mjs,mts,txs,jsx,vue}]
-indent_size = 4
-tab_width = 4
-ij_typescript_spaces_within_imports = true
+[{*.cjs,*.es6,*.js,*.mjs}]
 ij_javascript_spaces_within_imports = true
-ij_typescript_spaces_within_object_literal_braces = true
 ij_javascript_spaces_within_object_literal_braces = true
 ij_javascript_spaces_within_object_type_braces = true
-ij_typescript_spaces_within_object_type_braces = true
+ij_javascript_blank_lines_after_imports = 1
+ij_javascript_blank_lines_around_class = 1
+ij_javascript_blank_lines_around_field = 0
+ij_javascript_blank_lines_around_function = 1
+ij_javascript_blank_lines_around_method = 1
+ij_javascript_import_sort_members = true
+ij_javascript_import_sort_module_name = true
 
-# Vue
+[{*.ats,*.cts,*.mts,*.ts}]
+ij_typescript_spaces_within_imports = true
+ij_typescript_spaces_within_object_literal_braces = true
+ij_typescript_spaces_within_object_type_braces = true
+ij_typescript_blank_lines_after_imports = 1
+ij_typescript_blank_lines_around_class = 1
+ij_typescript_blank_lines_around_field = 0
+ij_typescript_blank_lines_around_field_in_interface = 0
+ij_typescript_blank_lines_around_function = 1
+ij_typescript_blank_lines_around_method = 1
+ij_typescript_blank_lines_around_method_in_interface = 0
+ij_typescript_import_sort_members = true
+ij_typescript_import_sort_module_name = true
+
 [*.vue]
 ij_vue_indent_children_of_top_level = template,script,style
+ij_vue_interpolation_new_line_after_start_delimiter = true
+ij_vue_interpolation_new_line_before_end_delimiter = true
+ij_vue_interpolation_wrap = off
+ij_vue_keep_indents_on_empty_lines = false
+ij_vue_spaces_within_interpolation_expressions = true
+
+[*.css]
+ij_css_align_closing_brace_with_properties = false
+ij_css_blank_lines_around_nested_selector = 1
+ij_css_blank_lines_between_blocks = 1
+ij_css_block_comment_add_space = false
+ij_css_brace_placement = end_of_line
+ij_css_enforce_quotes_on_format = true
+ij_css_hex_color_long_format = false
+ij_css_hex_color_lower_case = false
+ij_css_hex_color_short_format = false
+ij_css_hex_color_upper_case = false
+ij_css_keep_blank_lines_in_code = 1
+ij_css_keep_indents_on_empty_lines = false
+ij_css_keep_single_line_blocks = false
+ij_css_properties_order = font,font-family,font-size,font-weight,font-style,font-variant,font-size-adjust,font-stretch,line-height,position,z-index,top,right,bottom,left,display,visibility,float,clear,overflow,overflow-x,overflow-y,clip,zoom,align-content,align-items,align-self,flex,flex-flow,flex-basis,flex-direction,flex-grow,flex-shrink,flex-wrap,justify-content,order,box-sizing,width,min-width,max-width,height,min-height,max-height,margin,margin-top,margin-right,margin-bottom,margin-left,padding,padding-top,padding-right,padding-bottom,padding-left,table-layout,empty-cells,caption-side,border-spacing,border-collapse,list-style,list-style-position,list-style-type,list-style-image,content,quotes,counter-reset,counter-increment,resize,cursor,user-select,nav-index,nav-up,nav-right,nav-down,nav-left,transition,transition-delay,transition-timing-function,transition-duration,transition-property,transform,transform-origin,animation,animation-name,animation-duration,animation-play-state,animation-timing-function,animation-delay,animation-iteration-count,animation-direction,text-align,text-align-last,vertical-align,white-space,text-decoration,text-emphasis,text-emphasis-color,text-emphasis-style,text-emphasis-position,text-indent,text-justify,letter-spacing,word-spacing,text-outline,text-transform,text-wrap,text-overflow,text-overflow-ellipsis,text-overflow-mode,word-wrap,word-break,tab-size,hyphens,pointer-events,opacity,color,border,border-width,border-style,border-color,border-top,border-top-width,border-top-style,border-top-color,border-right,border-right-width,border-right-style,border-right-color,border-bottom,border-bottom-width,border-bottom-style,border-bottom-color,border-left,border-left-width,border-left-style,border-left-color,border-radius,border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius,border-image,border-image-source,border-image-slice,border-image-width,border-image-outset,border-image-repeat,outline,outline-width,outline-style,outline-color,outline-offset,background,background-color,background-image,background-repeat,background-attachment,background-position,background-position-x,background-position-y,background-clip,background-origin,background-size,box-decoration-break,box-shadow,text-shadow
+ij_css_space_after_colon = true
+ij_css_space_before_opening_brace = true
+ij_css_use_double_quotes = false
+ij_css_value_alignment = do_not_align
+
+[*.scss]
+ij_scss_align_closing_brace_with_properties = false
+ij_scss_blank_lines_around_nested_selector = 1
+ij_scss_blank_lines_between_blocks = 1
+ij_scss_block_comment_add_space = true
+ij_scss_brace_placement = 0
+ij_scss_enforce_quotes_on_format = true
+ij_scss_hex_color_long_format = false
+ij_scss_hex_color_lower_case = false
+ij_scss_hex_color_short_format = false
+ij_scss_hex_color_upper_case = false
+ij_scss_keep_blank_lines_in_code = 1
+ij_scss_keep_indents_on_empty_lines = false
+ij_scss_keep_single_line_blocks = false
+ij_scss_line_comment_add_space = true
+ij_scss_line_comment_at_first_column = false
+ij_scss_properties_order = font,font-family,font-size,font-weight,font-style,font-variant,font-size-adjust,font-stretch,line-height,position,z-index,top,right,bottom,left,display,visibility,float,clear,overflow,overflow-x,overflow-y,clip,zoom,align-content,align-items,align-self,flex,flex-flow,flex-basis,flex-direction,flex-grow,flex-shrink,flex-wrap,justify-content,order,box-sizing,width,min-width,max-width,height,min-height,max-height,margin,margin-top,margin-right,margin-bottom,margin-left,padding,padding-top,padding-right,padding-bottom,padding-left,table-layout,empty-cells,caption-side,border-spacing,border-collapse,list-style,list-style-position,list-style-type,list-style-image,content,quotes,counter-reset,counter-increment,resize,cursor,user-select,nav-index,nav-up,nav-right,nav-down,nav-left,transition,transition-delay,transition-timing-function,transition-duration,transition-property,transform,transform-origin,animation,animation-name,animation-duration,animation-play-state,animation-timing-function,animation-delay,animation-iteration-count,animation-direction,text-align,text-align-last,vertical-align,white-space,text-decoration,text-emphasis,text-emphasis-color,text-emphasis-style,text-emphasis-position,text-indent,text-justify,letter-spacing,word-spacing,text-outline,text-transform,text-wrap,text-overflow,text-overflow-ellipsis,text-overflow-mode,word-wrap,word-break,tab-size,hyphens,pointer-events,opacity,color,border,border-width,border-style,border-color,border-top,border-top-width,border-top-style,border-top-color,border-right,border-right-width,border-right-style,border-right-color,border-bottom,border-bottom-width,border-bottom-style,border-bottom-color,border-left,border-left-width,border-left-style,border-left-color,border-radius,border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius,border-image,border-image-source,border-image-slice,border-image-width,border-image-outset,border-image-repeat,outline,outline-width,outline-style,outline-color,outline-offset,background,background-color,background-image,background-repeat,background-attachment,background-position,background-position-x,background-position-y,background-clip,background-origin,background-size,box-decoration-break,box-shadow,text-shadow
+ij_scss_space_after_colon = true
+ij_scss_space_before_opening_brace = true
+ij_scss_use_double_quotes = false
+ij_scss_value_alignment = 0
+
+[{*.mermaid,*.mmd}]
+tab_width = 2
+indent_size = 2
+ij_continuation_indent_size = 2
+ij_mermaid_after_arrow_text_within_sep = false
+ij_mermaid_after_colon = true
+ij_mermaid_after_comma = true
+ij_mermaid_around_arrow = true
+ij_mermaid_around_equality = false
+ij_mermaid_around_inline_arrow_text = true
+ij_mermaid_around_style_separator = false
+ij_mermaid_beetween_line_type_and_relation_type = false
+ij_mermaid_before_arrow_text_within_sep = false
+ij_mermaid_before_colon = false
+ij_mermaid_before_comma = false
+ij_mermaid_before_generic = true
+ij_mermaid_before_open_curly = true
+ij_mermaid_before_open_round = false
+ij_mermaid_before_semicolon = false
+ij_mermaid_between_node_id_and_node_shape = false
+ij_mermaid_between_state_and_annotation = true
+ij_mermaid_force_one_space_between_words = true
+ij_mermaid_keep_indents_on_empty_lines = false
+ij_mermaid_keep_lines_around_structured_statements = 1
+ij_mermaid_keep_lines_between_other_statements = 1
+ij_mermaid_keep_lines_between_structured_statements = 1
+ij_mermaid_keep_lines_within_structures = 0
+ij_mermaid_min_lines_around_structured_statements = 1
+ij_mermaid_min_lines_between_other_statements = 0
+ij_mermaid_min_lines_between_structured_statements = 1
+ij_mermaid_min_lines_within_structures = 0
+ij_mermaid_within_annotation_braces = false
+ij_mermaid_within_arrow_text_sep = false
+ij_mermaid_within_curly = true
+ij_mermaid_within_node_shapes = false
+ij_mermaid_within_round = false
+ij_mermaid_within_square = false
+
+[{*.wsdl,*.xml,*.xsd,*.xsl,*.xslt}]
+ij_xml_align_attributes = true
+ij_xml_align_text = false
+ij_xml_attribute_wrap = normal
+ij_xml_block_comment_add_space = true
+ij_xml_block_comment_at_first_column = false
+ij_xml_keep_blank_lines = 1
+ij_xml_keep_indents_on_empty_lines = false
+ij_xml_keep_line_breaks = true
+ij_xml_keep_line_breaks_in_text = true
+ij_xml_keep_whitespaces = false
+ij_xml_keep_whitespaces_around_cdata = preserve
+ij_xml_keep_whitespaces_inside_cdata = false
+ij_xml_line_comment_at_first_column = true
+ij_xml_space_after_tag_name = false
+ij_xml_space_around_equals_in_attribute = false
+ij_xml_space_inside_empty_tag = false
+ij_xml_text_wrap = normal
+ij_xml_use_custom_settings = false
+
+[.editorconfig]
+ij_editorconfig_align_group_field_declarations = false
+ij_editorconfig_space_after_colon = false
+ij_editorconfig_space_after_comma = false
+ij_editorconfig_space_before_colon = false
+ij_editorconfig_space_before_comma = false
+ij_editorconfig_spaces_around_assignment_operators = true
