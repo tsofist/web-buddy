@@ -1,3 +1,5 @@
+import { env } from 'node:process';
+
 /**
  * @internal
  */
@@ -32,6 +34,14 @@ export function bootstrapSemanticReleaseConfig(
         const prerelease = `\${name.replace(/^${channel}\\//, '${channel}.')}`;
 
         branches.push({ name, channel, prerelease });
+    }
+
+    {
+        const name = env.WB_RELEASE_PRE_BRANCH;
+        const channel = env.WB_RELEASE_PRE_CHANNEL ?? '${name}';
+        if (name) {
+            branches.push({ name, channel, prerelease: true });
+        }
     }
 
     return {
@@ -76,8 +86,8 @@ export type ReleaseBranchFlowParams = {
 };
 
 /**
- * @see https://semantic-release.gitbook.io/semantic-release/usage/configuration#branches Branches | semantic-release
- * @see https://semantic-release.gitbook.io/semantic-release/usage/workflow-configuration#workflow-configuration Workflow | semantic-release
+ * @see https://semantic-release.org/usage/configuration/#branches Branches | Semantic Release
+ * @see https://semantic-release.org/foundation/workflow-configuration/ Workflow | Semantic Release
  */
 type SemanticReleaseBranchDef =
     // Workflow: Distribution channel
@@ -103,8 +113,10 @@ type SemanticReleaseBranchDef =
  *   { name: "wip", channel: "wip", prerelease: "${name.replace(/^wip\\//, 'wip.')}" }
  * ```
  *
- * @see https://semantic-release.gitbook.io/semantic-release/usage/workflow-configuration#workflow-configuration#pre-release-branches Pre-release branches | semantic-release
- * @see https://semantic-release.gitbook.io/semantic-release/recipes/release-workflow/pre-releases Workflow: Pre-releases | semantic-release
+ * @see https://semantic-release.org/foundation/workflow-configuration/ Release Workflow Configuration | Semantic
+ *     Release
+ * @see https://semantic-release.org/recipes/release-workflow/pre-releases/ Workflow: Publishing pre-releases |
+ *     Semantic Release
  */
 type SemanticReleaseBranchPreRelease = {
     name: string;
@@ -125,8 +137,10 @@ type SemanticReleaseBranchPreRelease = {
  *   { name: "1.x", channel: "1.x", range: "1.x" },
  * ```
  *
- * @see https://semantic-release.gitbook.io/semantic-release/usage/workflow-configuration#workflow-configuration#maintenance-branches Maintenance branches | semantic-release
- * @see https://semantic-release.gitbook.io/semantic-release/recipes/release-workflow/maintenance-releases Workflow: Maintenance releases | semantic-release
+ * @see https://semantic-release.org/foundation/workflow-configuration/#maintenance-branches Maintenance branches |
+ *     Semantic Release
+ * @see https://semantic-release.org/recipes/release-workflow/maintenance-releases Workflow: Publishing maintenance
+ *     releases | Semantic Release
  */
 type SemanticReleaseBranchMaintenance = {
     name: string;
@@ -135,7 +149,8 @@ type SemanticReleaseBranchMaintenance = {
 };
 
 /**
- * @see https://semantic-release.gitbook.io/semantic-release/recipes/release-workflow/distribution-channels Workflow: Distribution channels | semantic-release
+ * @see https://semantic-release.org/recipes/release-workflow/distribution-channels/ Workflow: Distribution channels |
+ *     semantic-release
  */
 type SemanticReleaseBranchDistributionChannel = string;
 
