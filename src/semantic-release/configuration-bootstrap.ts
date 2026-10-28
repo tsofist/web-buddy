@@ -5,7 +5,7 @@ import { env } from 'node:process';
  */
 export function bootstrapSemanticReleaseConfig(
     platform: SemanticReleasePlatform,
-    branchesFlow: SemanticReleaseBranchesFlow = DEF_BRANCHES_FLOW,
+    branchesFlow?: SemanticReleaseBranchesFlow,
 ) {
     const branches: SemanticReleaseBranchDef[] = [
         'main',
@@ -17,7 +17,7 @@ export function bootstrapSemanticReleaseConfig(
         { name: 'alpha', prerelease: true },
     ];
 
-    if (branchesFlow.maintenance) {
+    if (branchesFlow?.maintenance) {
         const prefix =
             branchesFlow.maintenance.branchPrefix ?? DEF_BRANCHES_FLOW.maintenance.branchPrefix;
         const channel =
@@ -27,7 +27,7 @@ export function bootstrapSemanticReleaseConfig(
         branches.push({ name, channel });
     }
 
-    if (branchesFlow.draft) {
+    if (branchesFlow?.draft) {
         const prefix = branchesFlow.draft.branchPrefix ?? DEF_BRANCHES_FLOW.draft.branchPrefix;
         const channel = branchesFlow.draft.releaseChannel ?? DEF_BRANCHES_FLOW.draft.releaseChannel;
         const name = `${prefix}/*`;
