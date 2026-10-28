@@ -38,9 +38,12 @@ export function bootstrapSemanticReleaseConfig(
 
     {
         const name = env.WB_RELEASE_PRE_BRANCH;
-        const channel = env.WB_RELEASE_PRE_CHANNEL ?? '${name}';
+
         if (name) {
-            branches.push({ name, channel, prerelease: true });
+            const channel = env.WB_RELEASE_PRE_CHANNEL || '${name}';
+            const prerelease = env.WB_RELEASE_PRE_NAME || env.WB_RELEASE_PRE_CHANNEL || true;
+
+            branches.push({ name, channel, prerelease });
         }
     }
 
