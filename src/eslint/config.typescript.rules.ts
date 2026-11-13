@@ -170,6 +170,7 @@ export const WebBuddyESLintTypeScriptRules = defineESLintRules(
         '@typescript-eslint/no-unsafe-function-type': 'warn', // noisy
 
         '@typescript-eslint/unified-signatures': 'off', // odd
+        '@typescript-eslint/no-unsafe-enum-assignment': 'off', // odd
         '@typescript-eslint/no-unsafe-enum-comparison': 'off', // odd
         '@typescript-eslint/no-duplicate-type-constituents': 'off', // odd
         '@typescript-eslint/no-dynamic-delete': 'off', // fine in general
